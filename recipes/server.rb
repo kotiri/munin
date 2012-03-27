@@ -102,7 +102,7 @@ else
   end
 end
 
-apache_site "000-default" do
+apache2_site "000-default" do
   enable false
 end
 
@@ -121,4 +121,4 @@ directory node['munin']['docroot'] do
   mode 0755
 end
 
-apache_site "munin.conf"
+apache2_site "munin.conf"
