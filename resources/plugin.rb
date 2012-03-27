@@ -22,7 +22,7 @@ attribute :name, :kind_of => String, :name_attribute => true
 attribute :plugin, :kind_of => String, :default => new_resource.name
 attribute :config, :kind_of => String, :default => node['munin']['plugins']
 attribute :plugin_dir, :kind_of => String, :default => node['munin']['plugin_dir']
-attribute :create_file, :kind_of => Boolean, :default => false
+attribute :create_file, :kind_of => [TrueClass, FalseClass], :default => false
 
 def initialize(*args)
   super
