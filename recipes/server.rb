@@ -103,7 +103,7 @@ else
 end
 
 apache2_site "000-default" do
-  enable false
+  action :disable
 end
 
 template "#{node['apache']['dir']}/sites-available/munin.conf" do
